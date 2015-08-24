@@ -81,7 +81,7 @@ body {
   <p>Thus working on etherpad for me wasn't a question of choice, it was a question of honor. I've spent my fair share of evenings fixing bugs, developing new features -- and I loved the work I was doing. Yet, the big picture remained, in my opinion, unsatisfactory -- even though what we have today is already the second implementation of etherpad.</p>
   <p>Having had some time to think, I concluded it was time for some disruptive innovation, a clean break from the old ways. This is hive.js, a collaborative editor the web needs: modular, scalable and easily integratable.</p>
   <h3>Architecture</h3>
-  <p>Hive core is split into some 20 components that each do one thing well and integrate through <a href="#!!!">architect</a>, which allows you to easily switch out components with your own implementations. The core is very light and only provides the bare minimum of features, this on the other hand makes it very extensible, since implementing standard features like a chat or a user list as plugins necessitates adding a variety of hooks and APIs to core that can be used by other plugins as well.</p>
+  <p>Hive core is split into some 20 components that each do one thing well and integrate through <a href="https://github.com/c9/architect">architect</a>, which allows you to easily switch out components with your own implementations. The core is very light and only provides the bare minimum of features, this on the other hand makes it very extensible, since implementing standard features like a chat or a user list as plugins necessitates adding a variety of hooks and APIs to core that can be used by other plugins as well.</p>
   <p>An important part of the hive.js design is authentication and authorization, which has been a soar spot in Etherpad since day one, in my opinion. Hive.js is completely unopinionated in this regard: You can write your own custom-tailored authentication provider or use a hand-made standard one, you can even build a whole portal on top of hive.js, full-featured with teams and access management. There's authorization hooks for every operation and interfaces automatically delegate to the registered authentication provider.</p>
   <p>A key product of the modular design is the possibility to add a variety document types together with a corresponding editor. This is made possible by an underlying library called gulf, which is a unixy alternative to shareJS. Currently available editors are <code>text</code> for normal plain text editing, <code>html</code> for rich text full-featured with tables and images and <code>svg</code> for drawing vector graphics with different drawing tools and pre-set geometric forms.</p>
   <p>One of the flaws I see in etherpad is the choice of document format: Attributed line-by-line text. This works well for inline styles, but once you try and support more advanced concepts things get hairy. How do you represent things like an image or a table in a line-by-line text format? At the heart of Hive.js's rich text editor is one realization: Why not embrace a document format that is widely adopted, easy to integrate with and that can handle images, tables and much more out of the box? Why not embrace HTML? This realization paved the way for <a href="https://github.com/marcelklehr/dom-ot">dom-ot</a>, a syncing library, much like Etherpad's, but focused on HTML instead of attributed text.</p>
@@ -91,7 +91,7 @@ body {
     <li>a group of plugins that will provide and improve upon functionality shipped by etherpad, e.g. pad names, chat, authorship colors, presence list, comments etc.</li>
     <li>a waterline backend for RethinkDB, which will be the recommended back end</li>
     <li>something that is called teampads in the etherpad world, a full-featured portal allowing you to build and organize teams with multiple documents</li>
-    <li>in the long there might be the opportunity to add additional document types, like spreadsheets or presentations</li>
+    <li>in the long run there might be the opportunity to add additional document types, like spreadsheets or presentations</li>
   </ul></p>
   <p>You're welcome to join me!</p>
   <p>&nbsp;</p>
@@ -119,9 +119,9 @@ body {
 <section class="container">
   <a name="contact" class="header-pushdown"></a>
   <h2>Contact</h2>
-  <p>Îf you're having trouble, an idea or just want to talk, try one of these options</p>
+  <p>Îf you're having trouble, have an idea or just want to talk, try one of these:</p>
   <ul>
-    <li><a href="#!!!">The hive.js mailing list</a></li>
+    <li><a href="https://groups.google.com/forum/?pli=1#!forum/hivejs">The hive.js mailing list</a></li>
     <li><a href="https://github.com/hivejs/hive/issues">File an issue on github</a></li>
     <li><a href="mailto:mklehr@gmx.net">Send me an e-mail</a></li>
   </ul>
