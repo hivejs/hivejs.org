@@ -50,7 +50,7 @@ iframe {
 <div class="container">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed"
-      data-toggle="collapse" data-target="navigation" aria-expanded="false">
+      data-toggle="collapse" data-target="#navigation" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
     </button>
@@ -60,6 +60,7 @@ iframe {
     <ul class="nav navbar-nav navbar-left">
       <li role="presentation"><a href="#about">About</a></li>
       <li role="presentation"><a href="#demo">Demo</a></li>
+      <li role="presentation"><a href="#resources">Resources</a></li>
       <li role="presentation"><a href="#contact">Contact</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -112,9 +113,9 @@ iframe {
       </div>
       <div class="clearfix visible-xs-block visible-sm-block"></div>
       <div class="cell col-xs-6 col-sm-4 col-md-3">
-        <img src="img/feature-settings.png" class="img-responsive img-thumbnail" />
-        <h3>User and Document settings</h3>
-      </div>
+        <img src="img/feature-stateoftheart.png" class="img-responsive img-thumbnail" />
+        <h3>State-of-the-art principles</h3>
+       </div>
       <div class="cell col-xs-6 col-sm-4 col-md-3">
         <img src="img/feature-extensible.png" class="img-responsive img-thumbnail" />
         <h3>Built to be extensible</h3>
@@ -128,9 +129,9 @@ iframe {
       </div>
       <div class="clearfix visible-sm-block"></div>
       <div class="cell col-xs-6 col-sm-4 col-md-3">
-        <img src="img/feature-stateoftheart.png" class="img-responsive img-thumbnail" />
-        <h3>State of the art principles</h3>
-       </div>
+        <img src="img/feature-settings.png" class="img-responsive img-thumbnail" />
+        <h3>User and Document settings</h3>
+      </div>
       <div class="clearfix visible-xs-block"></div>
        <div class="cell col-xs-6 col-sm-4 col-md-3">
         <img src="img/feature-coming-soon.png" class="img-responsive img-thumbnail" />
@@ -173,8 +174,6 @@ iframe {
   <p>You're welcome to join me!</p>
   <p>Marcel Klehr</p>
   <p>&nbsp;</p>
-  <p>Stay up-to-date by following <a href="http://blog.hivejs.org">the blog</a>!</p>
-  <p>Check out <a href="http://blog.hivejs.org/comparing-hivejs-and-etherpad/">this comparison of hive and etherpad</a>!</p>
 </section>
 <a name="demo" class="header-pushdown"></a>
 <div class="jumbotron">
@@ -189,20 +188,29 @@ iframe {
   </div>
 </div>
 <section class="container">
+  <a name="resources" class="header-pushdown"></a>
+  <h2>Resources</h2>
+  <ul>
+    <li>Stay up-to-date by following <a href="http://blog.hivejs.org">the blog</a></li>
+    <li>Check out <a href="http://blog.hivejs.org/comparing-hivejs-and-etherpad/">this comparison of hive and etherpad</a></li>
+    <li>The official <a href="https://www.gitbook.com/read/book/hivejs/hive-js-documentation">Hive.js Documentation</a></li>
+  </ul>
+</section>
+<section class="container">
   <a name="contact" class="header-pushdown"></a>
   <h2>Contact</h2>
   <p>Îf you're having trouble, have an idea or just want to talk, try one of these:</p>
   <ul>
-    <li><a href="http://webchat.freenode.net/?channels=#hive.js">Ask in IRC channel #hive.js on freenode.net</a></li>
-    <li><a href="https://groups.google.com/d/forum/hivejs">The hive.js mailing list</a> (<a href="mailto:hivejs@googlegroups.com">address</a>)</li>
-    <li><a href="https://github.com/hivejs/hive/issues">File an issue on github</a></li>
-    <li><a href="mailto:mklehr@gmx.net">Send me an e-mail</a></li>
+    <li><a href="http://webchat.freenode.net/?channels=#hive.js">IRC channel #hive.js on freenode.net</a></li>
+    <li><a href="https://groups.google.com/d/forum/hivejs">The mailing list</a> (<a href="mailto:hivejs@googlegroups.com">address</a>)</li>
+    <li><a href="https://github.com/hivejs/hive/issues">Github Issues</a></li>
+    <li><a href="mailto:mklehr@gmx.net">E-mail</a></li>
   </ul>
   <p><i class="glyphicon glyphicon-star"></i> If you want to express your love and spread the word, leave a star on the <a href="https://github.com/hivejs/hive">main github repo</a>!</p>
 </section>
 <div class="footer">
   <div class="container">
-    <p>(c) 2015 by Marcel Klehr</p>
+    <p>(c) 2015-2016 by Marcel Klehr</p>
   </div>
 </div>
 <!-- Piwik -->
@@ -220,5 +228,7 @@ iframe {
 </script>
 <noscript><p><img src="//piwik.der-analphabet.de/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
 <!-- End Piwik Code -->
+<script src="js/jquery-1.12.0.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
