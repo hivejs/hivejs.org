@@ -17,6 +17,7 @@ body {
 }
 .header-pushdown {
   padding-top: 50px;
+  display: block;
 }
 
 .jumbotron img {
@@ -60,7 +61,6 @@ iframe {
     <ul class="nav navbar-nav navbar-left">
       <li role="presentation"><a href="#about">About</a></li>
       <li role="presentation"><a href="#demo">Demo</a></li>
-      <li role="presentation"><a href="#resources">Resources</a></li>
       <li role="presentation"><a href="#contact">Contact</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
@@ -98,7 +98,7 @@ iframe {
       <div class="clearfix visible-sm-block"></div>
       <div class="cell col-xs-6 col-sm-4 col-md-3">
         <img src="img/feature-i18n.png" class="img-responsive img-thumbnail" />
-        <h3>In your mother tongue</h3>
+        <h3>Speaking your language</h3>
       </div>
       
       <div class="clearfix visible-xs-block visible-md-block visible-lg-block"></div>
@@ -147,64 +147,51 @@ iframe {
 <div class="jumbotron">
   <div class="container">
     <a name="about" class="header-pushdown"></a>
-    <h2>Introducing Hive.js</h2>
+    <h2>What is it?</h2>
   </div>
 </div>
 <section class="container">
-  <h3>The story</h3>
-  <p class="lead">I love the web and I love how technology enables us to find new ways of communication, new ways of participation, new ways of creation even.</p>
-  <p>I have long since been attracted to the idea of real-time collaboration. Working in real-time on a single document with people that are miles away isn't just a new experience, it is indeed a new way of creation. Collaborative editing à la <a href="http://etherpad.org">Etherpad</a> or Google Docs is a milestone on the road of the digial era.</p>
-  <p>Thus working on etherpad for me wasn't a question of choice, it was a question of honor. I've spent my fair share of evenings fixing bugs, developing new features -- and I loved the work I was doing. Yet, the big picture remained, in my opinion, unsatisfactory -- even though what we have today is already the second implementation of etherpad.</p>
-  <p>Having had some time to think, I concluded it was time for some disruptive innovation, a clean break from the old ways. This is hive.js, a collaborative editor the web needs: modular, scalable and easily integratable.</p>
-  <h3>What is Hive.js?</h3>
-  <p>Hive aims to be an extensible collaboration platform, that you can turn into the service you need it to be. It could be turned into an open-source alternative to Google Docs, but like Etherpad, the main aim is integration into existing apps: content management systems like Wordpress and Drupal, cloud storage applications like Owncloud, wikis like MediaWiki, etc.</p>
-  <h3>Architecture</h3>
-  <p>Hive core is split into some 20 components that each do one thing well and integrate through <a href="https://github.com/c9/architect">architect</a>, which makes development much easier. The core is very light and only provides the bare minimum of features, while being very extensible. There are some official plugins implementing standard features like a chat or a user list, which necessitated adding a variety of hooks and APIs to core that can be used by other plugins as well.</p>
-  <p>An important part of the hive.js design is authentication and authorization, which has been a soar spot in Etherpad since day one, in my opinion. Hive.js is completely unopinionated in this regard: You can write your own custom-tailored authentication provider or use a hand-made standard one, you can even build a whole portal on top of hive.js, full-featured with teams and access management. There's authorization hooks for every operation and interfaces (like the REST API) automatically delegate to the registered auth providers.</p>
-  <p>A key product of the modular design is the possibility to add a variety document types together with a corresponding editor. This is made possible by an underlying library called gulf, which is a unixy alternative to shareJS. Currently available editors are CodeMirror for normal plain text and code editing, CKeditor for rich text full-featured with tables and images and MethodDraw for drawing vector graphics with different drawing tools and pre-set geometric forms.</p>
-  <p>One of the flaws I see in etherpad is the choice of document format: Attributed line-by-line text. This works well for inline styles, but once you try and support more advanced concepts things get hairy. How do you represent things like an image or a table in a line-by-line text format? At the heart of Hive.js's rich text editor is one realization: Why not embrace a document format that is widely adopted, easy to integrate with and that can handle images, tables and much more out of the box? Why not embrace HTML? This realization paved the way for <a href="https://github.com/marcelklehr/dom-ot">dom-ot</a>, a syncing library, much like Etherpad's, but focused on HTML instead of attributed text.</p>
-  <h3>The road ahead</h3>
-  <p>I'm releasing hive.js under the terms of the GNU General Public License, to make sure that it will always remain freely usable by humans from all around the world. This means that any plugins you write must by licensed under a GPL-compatible license. Some may see that as a disadvantage, I see it as an advantage. It's the promise that all modifications and extensions of the software will remain free forever.</p>
-  <p>So, what have the coming months in store for us? I intend to focus my attention on the following items: <ul>
-    <li>a group of plugins that will provide and improve upon functionality shipped by etherpad, e.g. pad names, chat, authorship colors, presence list, comments etc.</li>
-    <li>something that is called teampads in the etherpad world, a full-featured portal allowing you to build and organize teams with multiple documents</li>
-    <li>Plugins for integration into other useful web applications (these could include wordpress, Owncloud, MediaWiki, etc.)</li>
-    <li>in the long run there might be the opportunity to add additional document types, like spreadsheets or presentations</li>
-  </ul></p>
-  <p>You're welcome to join me!</p>
-  <p>Marcel Klehr</p>
-  <p>&nbsp;</p>
+<div class="row">
+<div class="col-xs-12">
+  <h3>Hive.js is a real-time collaboration platform that is modular, scalable, integratable and extensible. It's a Node.js-based server with an accompanying web app that works in your browser.</h3>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6">
+<p><b>It's a collaboration platform:</b> it allows you to collaborate on all kinds of documents and integrate your applications with it (you don't need to use the web app).</p>
+<p><b>It's modular and extensible:</b> editors, authentication and authorization and more can be customized.</p>
+<p><b>It's scalable:</b> it allows you to spin up multiple server instances that all share the same documents.</p>
+</div>
+<div class="col-sm-6">
+<p><b>It's integratable</b> through a rich RESTful API and a websocket-based interface, with support for adding additional interface.</p>
+<p><b>It's born</b> out of the author's frustration with etherpad -- read more about its <a href="blog.hivejs.org/introducing-hive-js/">story</a> and <a href="http://blog.hivejs.org/comparing-hivejs-and-etherpad/">how it compares to etherpad</a>.</p>
+<p><b>It's still a work-in-progress</b> and not quite perfect yet, but you can check out some demos below!</p>
+</div>
+</div>
 </section>
 <a name="demo" class="header-pushdown"></a>
 <div class="jumbotron">
   <div class="container">
     <h2>Biscuits? Have a demo!</h2>
+    <p>&nbsp;</p>
     <div class="row">
     <div class="col-xs-4"><a href="http://beta.hivejs.org/documents/1"><img src="img/editor-plaintext.png" class="img-responsive img-thumbnail" /><h3>Plain text</h3></a></div>
     <div class="col-xs-4"><a href="http://beta.hivejs.org/documents/2"><img src="img/editor-html.png" class="img-responsive img-thumbnail" /><h3>HTML</h3></a></div>
     <div class="col-xs-4"><a href="http://beta.hivejs.org/documents/3"><img src="img/editor-svg.png" class="img-responsive img-thumbnail" /><h3>SVG</h3></a></div>
     </div>
-    <p><small>Hive uses some brand new features that aren't available in all browsers, yet. So, these demos might not work for you, sadly. Try them with Chrome or Firefox! Also note that these demos are public, so anyone can write/draw anything!</small></p>
+    <p>&nbsp;</p>
+    <p><small>Hive uses some brand new features that aren't available in all browsers, yet. So, these demos might not work for you, sadly. Try them with Chrome or Firefox! Also note that these demos are public, so anyone can write/draw anything. If you feel someone is abusing the demo application, <a href="#contact">contact</a> me! The same applies if a demo is broken: just drop me a mail.</small></p>
   </div>
 </div>
-<section class="container">
-  <a name="resources" class="header-pushdown"></a>
-  <h2>Resources</h2>
-  <ul>
-    <li>Stay up-to-date by following <a href="http://blog.hivejs.org">the blog</a></li>
-    <li>Check out <a href="http://blog.hivejs.org/comparing-hivejs-and-etherpad/">this comparison of hive and etherpad</a></li>
-    <li>The official <a href="https://www.gitbook.com/read/book/hivejs/hive-js-documentation">Hive.js Documentation</a></li>
-  </ul>
-</section>
 <section class="container">
   <a name="contact" class="header-pushdown"></a>
   <h2>Contact</h2>
   <p>Îf you're having trouble, have an idea or just want to talk, try one of these:</p>
   <ul>
-    <li><a href="http://webchat.freenode.net/?channels=#hive.js">IRC channel #hive.js on freenode.net</a></li>
-    <li><a href="https://groups.google.com/d/forum/hivejs">The mailing list</a> (<a href="mailto:hivejs@googlegroups.com">address</a>)</li>
-    <li><a href="https://github.com/hivejs/hive/issues">Github Issues</a></li>
-    <li><a href="mailto:mklehr@gmx.net">E-mail</a></li>
+    <li><a href="https://groups.google.com/d/forum/hivejs">The mailing list</a> (<a href="mailto:hivejs@googlegroups.com">address</a>) <em>for general discussions</em></li>
+    <li><a href="https://github.com/hivejs/hive/issues">Github Issues</a> <em>if you have a specific problem or feature request</em></li>
+    <li><a href="mailto:mklehr@gmx.net">E-mail</a> <em>If you want to talk privately or don't have/want a Github or Google account.</em></li>
+    <li><a href="http://webchat.freenode.net/?channels=#hive.js">#hive.js on freenode.net</a> or <a href="https://gitter.im/hivejs/chat">Gitter</a> <em>for informal communication, discussions, etc.</em></li>
   </ul>
   <p><i class="glyphicon glyphicon-star"></i> If you want to express your love and spread the word, leave a star on the <a href="https://github.com/hivejs/hive">main github repo</a>!</p>
 </section>
