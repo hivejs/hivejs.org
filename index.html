@@ -11,6 +11,10 @@
   background: #fff;
 }
 
+h1,h2,h3,h4,h5,h6 {
+  color: #584944;
+}
+
 /*Push down body to make room for navbar*/
 body {
   padding-top: 50px;
@@ -20,16 +24,37 @@ body {
   display: block;
 }
 
+.page-header {
+  border: none;
+  text-shadow: 0 0 50px #e9d347;
+}
+
+.jumbotron {
+  background-color: #c2d49b;
+  margin-bottom: 0;
+}
 .jumbotron img {
   width: 100%;
   height: auto;
 }
 
+.bg {
+  padding-top: 30px;
+  background-image: url(img/bg.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.bg * {
+  color: #fff;
+}
+
+section {
+  padding: 30px 0;
+}
+
 .footer {
   padding: 40px 0;
-  margin-top: 70px;
   text-align: center;
-  background: #f8f8f8;
 }
 
 iframe {
@@ -37,10 +62,19 @@ iframe {
   width: 100%;
 }
 
-.external-link {
-  color: #b3ad14 !important
+a {
+  color: #8d5f47;
+}
+a:hover, a:active, a:focus {
+  color: #c68f3c;
 }
 
+.external-link {
+  color: #c5b23c !important
+}
+.external-link:hover, .external-link:focus {
+  color: #e9d347 !important;
+}
 .row > .cell {
   margin-bottom: 50px;
 }
@@ -72,14 +106,15 @@ iframe {
   </div>
 </div>
 </nav>
-<div class="jumbotron">
+<div class="jumbotron bg">
   <div class="container">
     <div class="page-header">
-      <img src="hive.png" />
-      <h1>A collaborative editor the web needs</h1>
+      <h1>Hive.js</h1>
+      <h2>A collaborative editor the web needs</h2>
     </div>
   </div>
 </div>
+<div class="jumbotron">
   <div class="container">
     <div class="row">
       <div class="cell col-xs-6 col-sm-4 col-md-3">
@@ -143,8 +178,8 @@ iframe {
       </div>
     </div>
   </div>
-
-<div class="jumbotron">
+</div>
+<div class="jumbotron bg">
   <div class="container">
     <a name="about" class="header-pushdown"></a>
     <h2>What is it?</h2>
@@ -184,10 +219,14 @@ iframe {
     <p><small>Hive uses some brand new features that aren't available in all browsers, yet. So, these demos might not work for you, sadly. Try them with Chrome or Firefox! Also note that these demos are public, so anyone can write/draw anything. If you feel someone is abusing the demo application, <a href="#contact">contact</a> me! The same applies if a demo is broken: just drop me a mail.</small></p>
   </div>
 </div>
-<section class="container">
+<div class="jumbotron bg">
+<div class="container">
   <a name="contact" class="header-pushdown"></a>
   <h2>Contact</h2>
-  <p>Îf you're having trouble, have an idea or just want to talk, try one of these:</p>
+</div>
+</div>
+<section class="container">
+  <p>If you're having trouble, have an idea or just want to talk, try one of these:</p>
   <ul>
     <li><a href="https://groups.google.com/d/forum/hivejs">The mailing list</a> (<a href="mailto:hivejs@googlegroups.com">address</a>) <em>for general discussions</em></li>
     <li><a href="https://github.com/hivejs/hive/issues">Github Issues</a> <em>if you have a specific problem or feature request</em></li>
@@ -196,7 +235,7 @@ iframe {
   </ul>
   <p><i class="glyphicon glyphicon-star"></i> If you want to express your love and spread the word, leave a star on the <a href="https://github.com/hivejs/hive">main github repo</a>!</p>
 </section>
-<div class="footer">
+<div class="footer bg">
   <div class="container">
     <p>(c) 2015-2016 by Marcel Klehr</p>
   </div>
