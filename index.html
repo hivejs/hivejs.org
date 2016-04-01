@@ -11,6 +11,15 @@
   background: #fff;
 }
 
+.navbar-brand {
+  height: 49px;/*fixes logo v-alignment*/
+}
+.navbar-brand > img {
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+}
+
 h1,h2,h3,h4,h5,h6 {
   color: #584944;
 }
@@ -27,6 +36,12 @@ body {
 .page-header {
   border: none;
   text-shadow: 0 0 50px #e9d347;
+}
+
+.page-header img {
+  width: auto !important;
+  height: 1em !important;
+  vertical-align: top;
 }
 
 .jumbotron {
@@ -89,7 +104,7 @@ a:hover, a:active, a:focus {
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
     </button>
-    <a href="http://hivejs.org" class="navbar-brand">Hive.js</a>
+    <a href="http://hivejs.org" class="navbar-brand"><img src="img/logo_grey.svg" />Hive.js</a>
   </div>
   <div role="navigation" class="collapse navbar-collapse" id="navigation">
     <ul class="nav navbar-nav navbar-left">
@@ -109,7 +124,7 @@ a:hover, a:active, a:focus {
 <div class="jumbotron bg">
   <div class="container">
     <div class="page-header">
-      <h1>Hive.js</h1>
+      <h1><img src="img/logo_white.svg" />Hive.js</h1>
       <h2>A collaborative editor the web needs</h2>
     </div>
   </div>
@@ -238,6 +253,7 @@ a:hover, a:active, a:focus {
 <div class="footer bg">
   <div class="container">
     <p>(c) 2015-2016 by Marcel Klehr</p>
+    <p>The hive.js logo was created by <a href="https.//thenounproject.com/tipografico">Andrea Greco</a>.</p>
   </div>
 </div>
 <!-- Piwik -->
