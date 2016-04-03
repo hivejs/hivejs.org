@@ -21,7 +21,7 @@
 }
 
 h1,h2,h3,h4,h5,h6 {
-  color: #584944;
+  color: #866003;
 }
 
 /*Push down body to make room for navbar*/
@@ -35,14 +35,9 @@ body {
 
 .page-header {
   border: none;
-  text-shadow: 0 0 50px #e9d347;
+  text-shadow: 0 0 7px #555;
 }
 
-.page-header img {
-  width: auto !important;
-  height: 1em !important;
-  vertical-align: top;
-}
 
 .jumbotron {
   background-color: #c2d49b;
@@ -61,6 +56,22 @@ body {
 }
 .bg * {
   color: #fff;
+}
+.bg .btn {
+  background: transparent;
+  border-color: white;
+  border-width: 2px;
+}
+.bg .btn:hover {
+  background: white;
+  text-shadow: none;
+}
+.features img {
+  box-shadow: 0 0 10px #555;
+}
+.features * {
+  text-shadow: 0 0 10px #555;
+  color: white;
 }
 
 section {
@@ -124,13 +135,13 @@ a:hover, a:active, a:focus {
 <div class="jumbotron bg">
   <div class="container">
     <div class="page-header">
-      <h1><img src="img/logo_white.svg" />Hive.js</h1>
-      <h2>A collaborative editor the web needs</h2>
+      <h1>Hive.js</h1>
+      <h2>A painless collaboration platform. <a class="btn btn-default" href="#demo">Show me!</a></h2>
     </div>
   </div>
 </div>
 <div class="jumbotron">
-  <div class="container">
+  <div class="container features">
     <div class="row">
       <div class="cell col-xs-6 col-sm-4 col-md-3">
         <img src="img/feature-real-time.gif" class="img-responsive img-thumbnail" />
@@ -214,7 +225,7 @@ a:hover, a:active, a:focus {
 <p><b>It's scalable:</b> it allows you to spin up multiple server instances that all share the same documents.</p>
 </div>
 <div class="col-sm-6">
-<p><b>It's integratable</b> through a rich RESTful API and a websocket-based interface, with support for adding additional interface.</p>
+<p><b>It's integratable</b> through a rich RESTful API and a websocket-based interface, with support for adding additional interfaces.</p>
 <p><b>It's born</b> out of the author's frustration with etherpad -- read more about its <a href="http://blog.hivejs.org/introducing-hive-js/">story</a> and <a href="http://blog.hivejs.org/comparing-hivejs-and-etherpad/">how it compares to etherpad</a>.</p>
 <p><b>It's still a work-in-progress</b> and not quite perfect yet, but you can check out some demos below!</p>
 </div>
@@ -225,7 +236,7 @@ a:hover, a:active, a:focus {
   <div class="container">
     <h2>Biscuits? Have a demo!</h2>
     <p>&nbsp;</p>
-    <div class="row">
+    <div class="row features">
     <div class="col-xs-4"><a href="http://beta.hivejs.org/documents/1"><img src="img/editor-plaintext.png" class="img-responsive img-thumbnail" /><h3>Plain text</h3></a></div>
     <div class="col-xs-4"><a href="http://beta.hivejs.org/documents/2"><img src="img/editor-html.png" class="img-responsive img-thumbnail" /><h3>HTML</h3></a></div>
     <div class="col-xs-4"><a href="http://beta.hivejs.org/documents/3"><img src="img/editor-svg.png" class="img-responsive img-thumbnail" /><h3>SVG</h3></a></div>
