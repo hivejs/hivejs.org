@@ -281,6 +281,9 @@ a:hover, a:active, a:focus {
 <!-- Piwik -->
 <script type="text/javascript">
   var _paq = _paq || [];
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setCookieDomain", "*.hivejs.org"]);
+  _paq.push(["setDomains", ["*.hivejs.org"]]);
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
